@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:5000/messaging-app-6da4f/us-central1/api/dog").then(
+      (res) => {
+        console.log(res, "this is res");
+      }
+    );
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <div id="message">
+        <h2>Welcome</h2>
+        <h1>Simple Firebase CRUD application</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          You're seeing this because you've successfully setup Firebase Hosting.
+          Now it's time to go build something extraordinary!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <a href="https://ngozi.dev">Learning Firebase</a>
+      </div>
     </div>
   );
 }

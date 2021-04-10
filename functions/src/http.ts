@@ -1,9 +1,8 @@
 import * as functions from "firebase-functions"; // used for creating functions
-import * as admin from "firebase-admin"; // use it for making changes to firestore
+
 import * as express from "express";
 import * as cors from "cors";
 
-admin.initializeApp();
 const app = express();
 
 // Custom Middleware
